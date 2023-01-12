@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "../component/header/navbar";
+import Footer from "../component/Footer/Footer";
 
 function Router() {
   const x = "<div>5</div>";
@@ -7,7 +8,7 @@ function Router() {
     <Routes>
       <Route path="/" element={x} />
       <Route path="/home" element={<Navbar/>} />
-      <Route path="/builder" element={x} />
+      <Route path="/builder" element={<Footer/>} />
       <Route path="/choosebuild" element={x} />
     </Routes>
   );
