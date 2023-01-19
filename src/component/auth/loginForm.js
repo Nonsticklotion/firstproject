@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
-import Footer from "../layout/Footer/Footer";
-import Navbar from "../layout/header/Navbar";
 import "./LoginForm.css";
 function LoginForm() {
   return (
     <>
       <div className="widebox">
-        <div className="navbar">
-          <Navbar />
-        </div>
         <div className="bigLoginCard">
           <div class="cardRegister">
             <div className="form-group">
@@ -44,9 +39,6 @@ function LoginForm() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer">
-          <Footer />
         </div>
       </div>
     </>

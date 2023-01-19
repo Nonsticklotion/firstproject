@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWrench, faDesktop } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 function Navbar() {
   const mystyle = {
     color: "white",
@@ -9,14 +10,18 @@ function Navbar() {
   const iconstyle = {
     padding: "0 10px 10px 5px",
   };
-  const padding ={
-    padding: "5px 5px 0px 5px"
-  }
+  const padding = {
+    padding: "5px 5px 0px 5px",
+  };
   const nevbarIcon = "d-flex flex-row";
 
   return (
     <>
-      <nav class="navbar d-flex flex-row navbar-light " style={mystyle}>
+      <nav
+        sticky="top"
+        class="navbar d-flex flex-row navbar-light "
+        style={mystyle}
+      >
         <div class="d-flex flex-row" style={padding}>
           <a class="navbar-brand ml-5 d-flex flex-row" href="/home">
             <div style={iconstyle}>
@@ -48,12 +53,16 @@ function Navbar() {
           </div>
         </div>
         <div>
-          <button type="button" class="btn btn-primary m-1">
-            Log in
-          </button>
-          <button type="button" class="btn btn-primary m-1">
-            Register
-          </button>
+          <Link to="/login">
+            <button type="button" class="btn btn-primary m-1">
+              Log in
+            </button>
+          </Link>
+          <Link to="/register">
+            <button type="button" class="btn btn-primary m-1">
+              Register
+            </button>
+          </Link>
         </div>
       </nav>
     </>

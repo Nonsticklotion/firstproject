@@ -1,0 +1,13 @@
+.pickpart{
+    margin: 10px;
+}
+.table{
+    color: rgb(247, 245, 245);   
+}
+.total{
+    color: rgb(247, 245, 245);
+    margin: 10px;
+}
+.submitbut{
+    border-radius: 5px;
+}

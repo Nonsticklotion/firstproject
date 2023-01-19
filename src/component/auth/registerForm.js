@@ -1,19 +1,12 @@
 import "./RegisterForm.css";
-import Footer from "../layout/Footer/Footer";
-import Navbar from "../layout/header/Navbar";
 function RegisterForm() {
-  const margininput = "5px";
   return (
     <>
       <div className="widebox">
-        <div className="navbar">
-          <Navbar />
-        </div>
         <div className="register">
-          
           <div className="backregister">
             <form className="form">
-            <h1>Register</h1>
+              <h1>Register</h1>
               <div className="fnamelname">
                 <div className="fname">
                   <label for="inputEmail4">First Name</label>
@@ -104,9 +97,6 @@ function RegisterForm() {
               </div>
             </form>
           </div>
-        </div>
-        <div className="footer">
-          <Footer />
         </div>
       </div>
     </>
