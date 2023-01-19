@@ -13,37 +13,70 @@
   margin-top: auto;
   padding: 0;
 }
+.form {
+  padding: 0 5px 0 5px;
+}
 .register{
-    
-    
-    
+  display: flex;
+  justify-content: center;
 }
-.backregister{
-    height: 500px; 
-    width:auto; 
-    background-color: #a19a95;
+.backregister {
+  display: flex;
+  height: auto;
+  width: 600px;
+  /* padding:10px 5px 10px 5px ; */
+  margin: 30px 60px 30px 60px ;
+  background-color: #a19a95;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
+.fnamelname{
+  display: flex;
+flex-direction: row;
 }
-.Emailpassword{
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
+.fname{
+  margin: 5px 5px 5px 0;
 }
-.address1{
-    margin: 5px;
+.lname{
+  margin: 5px 5px 5px 0;
 }
-.address2{
-    margin: 5px;
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
-.CityStateZip{
- display: flex;
- flex-direction: row;
- margin: 5px;
+.Emailpassword {
+  display: flex;
+  flex-direction: row;
+  
 }
-.submitbottom{
-    margin: 5px;
+.email {
+  margin: 5px 5px 5px 0;
+}
+.password {
+  margin: 5px 5px 5px 0;
+}
+
+.address1 {
+  margin: 5px 5px 5px 0;
+}
+.address2 {
+  margin: 5px 5px 5px 0;
+}
+.CityStateZip {
+  display: flex;
+  flex-direction: row;
+}
+.city {
+  margin: 5px 5px 5px 0;
+}
+.state {
+  margin: 5px 5px 5px 0;
+}
+.zip {
+  margin: 5px 5px 5px 0;
+}
+.phonenumber{
+  margin: 5px 5px 20px 0;
+}
+.submitbottom {
+  margin: 5px;
 }
