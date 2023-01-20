@@ -1,6 +1,9 @@
 .pickpart{
     margin: 10px;
 }
+.choosePart,.watt{
+    color: rgb(247, 245, 245);
+}
 .table{
     color: rgb(247, 245, 245);   
 }

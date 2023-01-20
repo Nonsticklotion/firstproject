@@ -5,11 +5,11 @@ function Builder() {
   return (
     <>
       <div className="widebox">
-        <div className="ChoosePart">Choose Your Parts</div>
+        <div className="choosePart">Choose Your Parts</div>
         <div className="Parts">
           <div className="wattage">
             <div className="boxwatt"></div>
-            <div className="watt"></div>
+            <div className="watt">Estimated Wattage xx W</div>
           </div>
           <div className="pickpart">
             <table class="table">
