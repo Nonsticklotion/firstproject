@@ -23,18 +23,20 @@ function Navbar() {
         style={mystyle}
       >
         <div class="d-flex flex-row" style={padding}>
-          <a class="navbar-brand ml-5 d-flex flex-row" href="/home">
-            <div style={iconstyle}>
-              <img
-                // src="https://res.cloudinary.com/ddrwonhdb/image/upload/v1664359314/xvxwnypzyvx3gkvooevd.jpg"
-                width="30"
-                height="30"
-                class="d-inline-block align-top "
-                alt=""
-              />
-            </div>
-            <div class="text-warning ">PC Part</div>
-          </a>
+          <Link to="/home">
+            <a class="navbar-brand ml-5 d-flex flex-row" href="/home">
+              <div style={iconstyle}>
+                <img
+                  // src="https://res.cloudinary.com/ddrwonhdb/image/upload/v1664359314/xvxwnypzyvx3gkvooevd.jpg"
+                  width="30"
+                  height="30"
+                  class="d-inline-block align-top "
+                  alt=""
+                />
+              </div>
+              <div class="text-warning ">PC Part</div>
+            </a>
+          </Link>
           <div class={nevbarIcon}>
             <div class="m-2">
               <FontAwesomeIcon icon={faDesktop}></FontAwesomeIcon>
@@ -47,7 +49,7 @@ function Navbar() {
             <div class="m-2">
               <FontAwesomeIcon icon={faWrench}></FontAwesomeIcon>
             </div>
-            <a class="navbar-brand mr-5" href="/choosebuild">
+            <a class="navbar-brand mr-5" href="/product">
               <div class="text-light">Browse Product </div>
             </a>
           </div>
