@@ -15,6 +15,7 @@ import Motherboard from "../component/allproduct/product/Motherboard";
 import PowerSupply from "../component/allproduct/product/PowerSupply";
 import VideoCard from "../component/allproduct/product/VideoCard";
 import ProductTable from "../component/layout/ProductTable/ProductTable";
+import UserPage from "../component/userPage/UserPage";
 
 function Router() {
   const x = "<div>Hi</div>";
@@ -24,9 +25,9 @@ function Router() {
       <Routes>
         <Route path="/" element={x} />
         <Route path="/home" element={x} />
-        <Route path="/builder" element={<ProductTable />} />
+        <Route path="/builder" element={<UserPage />} />
         <Route path="/product">
-          <Route path="" element={<Allproduct/>} />
+          <Route path="" element={<Allproduct />} />
           <Route path="cpu" element={<Cpu />} />
           <Route path="cpu-cooler" element={<CpuCooler />} />
           <Route path="motherboard" element={<Motherboard />} />
@@ -40,7 +41,7 @@ function Router() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/user">
-          <Route path=":id" element={x} />
+          <Route path=":id" element={<UserPage />} />
           <Route path="yourcart" element={x} />
         </Route>
         <Route path="/adminhome">
