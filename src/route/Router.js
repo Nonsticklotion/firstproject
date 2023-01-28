@@ -14,7 +14,6 @@ import Memory from "../component/allproduct/product/Memory";
 import Motherboard from "../component/allproduct/product/Motherboard";
 import PowerSupply from "../component/allproduct/product/PowerSupply";
 import VideoCard from "../component/allproduct/product/VideoCard";
-import ProductTable from "../component/layout/ProductTable/ProductTable";
 import UserPage from "../component/userPage/UserPage";
 
 function Router() {
@@ -25,7 +24,7 @@ function Router() {
       <Routes>
         <Route path="/" element={x} />
         <Route path="/home" element={x} />
-        <Route path="/builder" element={<UserPage />} />
+        <Route path="/builder" element={<Builder />} />
         <Route path="/product">
           <Route path="" element={<Allproduct />} />
           <Route path="cpu" element={<Cpu />} />
@@ -46,8 +45,18 @@ function Router() {
         </Route>
         <Route path="/adminhome">
           <Route path="" element={x} />
-          <Route path="request" element={x} />
-          <Route path="suggestion" element={x} />
+          <Route path="addproduct" element={x}>
+            <Route path="cpu" element={<Cpu />} />
+            <Route path="cpu-cooler" element={<CpuCooler />} />
+            <Route path="motherboard" element={<Motherboard />} />
+            <Route path="memory" element={<Memory />} />
+            <Route path="internal-drive" element={<InternalDrive />} />
+            <Route path="video-card" element={<VideoCard />} />
+            <Route path="case" element={<Case />} />
+            <Route path="power-supply" element={<PowerSupply />} />
+          </Route>
+          <Route path="allproduct" element={x} />
+          <Route path="order" element={x} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />
