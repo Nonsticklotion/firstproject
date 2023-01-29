@@ -8,7 +8,7 @@ function Cpu() {
         <div className="header">
           <h1>Choose Cpu</h1>
         </div>
-        <div className="container">
+        <div className="contain">
           <div className="filter">
             <form>
               <div class="form-group">

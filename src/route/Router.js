@@ -15,6 +15,9 @@ import Motherboard from "../component/allproduct/product/Motherboard";
 import PowerSupply from "../component/allproduct/product/PowerSupply";
 import VideoCard from "../component/allproduct/product/VideoCard";
 import UserPage from "../component/userPage/UserPage";
+import AddCpu from "../component/addproduct/product/AddCpu";
+import AllAdd from "../component/addproduct/AllAdd";
+import AdminOrder from "../component/addproduct/AdminOrder";
 
 function Router() {
   const x = "<div>Hi</div>";
@@ -45,8 +48,9 @@ function Router() {
         </Route>
         <Route path="/adminhome">
           <Route path="" element={x} />
-          <Route path="addproduct" element={x}>
-            <Route path="cpu" element={<Cpu />} />
+          <Route path="addproduct">
+            <Route path="" element={<AllAdd/>}/>
+            <Route path="cpu" element={<AddCpu />} />
             <Route path="cpu-cooler" element={<CpuCooler />} />
             <Route path="motherboard" element={<Motherboard />} />
             <Route path="memory" element={<Memory />} />
@@ -55,8 +59,7 @@ function Router() {
             <Route path="case" element={<Case />} />
             <Route path="power-supply" element={<PowerSupply />} />
           </Route>
-          <Route path="allproduct" element={x} />
-          <Route path="order" element={x} />
+          <Route path="order" element={<AdminOrder/>} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />

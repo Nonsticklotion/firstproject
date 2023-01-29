@@ -1,0 +1,38 @@
+.header{
+    color: #fff;
+    margin: 10px;
+    
+}
+.bigbox{
+    display: flex;
+    flex-direction: column;
+}
+.contain{
+    display: flex;
+    flex-direction: row;
+}
+.labelName{
+    color: #fff;
+    margin: 5px;
+}
+.addinput{
+    margin: 5px;
+    width: 150px;
+}
+.submitbutton{
+    margin: 5px;
+}
+.deletebutton{
+    margin: 5px;
+}
+.addcontain{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.filter{
+ margin: 10px;
+}
+.table{
+ margin: 10px;
+}

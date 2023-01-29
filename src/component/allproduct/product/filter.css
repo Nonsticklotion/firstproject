@@ -3,11 +3,12 @@
     margin: 10px;
     
 }
-.container{
+.contain{
     display: flex;
     flex-direction: row;
 }
 .filter{
+    color: #fff;
  margin: 10px;
 }
 .table{
