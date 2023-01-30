@@ -15,18 +15,29 @@ import Motherboard from "../component/allproduct/product/Motherboard";
 import PowerSupply from "../component/allproduct/product/PowerSupply";
 import VideoCard from "../component/allproduct/product/VideoCard";
 import UserPage from "../component/userPage/UserPage";
-import AddCpu from "../component/addproduct/product/AddCpu";
+import YourCart from "../component/userPage/YourCart";
 import AllAdd from "../component/addproduct/AllAdd";
+import AddCpu from "../component/addproduct/product/AddCpu";
+import AddCpuCooler from "../component/addproduct/product/AddCpuCooler";
+import AddMotherboard from "../component/addproduct/product/AddMotherboard";
+import AddMemory from "../component/addproduct/product/AddMemory";
+import AddInternalDrive from "../component/addproduct/product/AddInternalDrive";
+import AddVideoCard from "../component/addproduct/product/AddVideoCard";
+import AddCase from "../component/addproduct/product/AddCase";
+import AddPowerSupply from "../component/addproduct/product/AddPowerSupply";
 import AdminOrder from "../component/addproduct/AdminOrder";
+import AdminFirstPage from "../component/addproduct/AdminFirstPage";
+import BfHome from "../component/BfHome";
+import Home from "../component/Home";
 
 function Router() {
-  const x = "<div>Hi</div>";
+  // const x = "<div>Hi</div>";
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={x} />
-        <Route path="/home" element={x} />
+        <Route path="/" element={<BfHome />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/builder" element={<Builder />} />
         <Route path="/product">
           <Route path="" element={<Allproduct />} />
@@ -44,22 +55,22 @@ function Router() {
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/user">
           <Route path=":id" element={<UserPage />} />
-          <Route path="yourcart" element={x} />
+          <Route path="yourcart" element={<YourCart />} />
         </Route>
         <Route path="/adminhome">
-          <Route path="" element={x} />
+          <Route path="" element={<AdminFirstPage/>} />
           <Route path="addproduct">
-            <Route path="" element={<AllAdd/>}/>
+            <Route path="" element={<AllAdd />} />
             <Route path="cpu" element={<AddCpu />} />
-            <Route path="cpu-cooler" element={<CpuCooler />} />
-            <Route path="motherboard" element={<Motherboard />} />
-            <Route path="memory" element={<Memory />} />
-            <Route path="internal-drive" element={<InternalDrive />} />
-            <Route path="video-card" element={<VideoCard />} />
-            <Route path="case" element={<Case />} />
-            <Route path="power-supply" element={<PowerSupply />} />
+            <Route path="cpu-cooler" element={<AddCpuCooler />} />
+            <Route path="motherboard" element={<AddMotherboard />} />
+            <Route path="memory" element={<AddMemory />} />
+            <Route path="internal-drive" element={<AddInternalDrive />} />
+            <Route path="video-card" element={<AddVideoCard />} />
+            <Route path="case" element={<AddCase />} />
+            <Route path="power-supply" element={<AddPowerSupply />} />
           </Route>
-          <Route path="order" element={<AdminOrder/>} />
+          <Route path="order" element={<AdminOrder />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" />} />
