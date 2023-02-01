@@ -30,13 +30,61 @@ import AdminFirstPage from "../component/addproduct/AdminFirstPage";
 import BfHome from "../component/BfHome";
 import Home from "../component/Home";
 
-function Router() {
-  // const x = "<div>Hi</div>";
+// function Router() {
+//   // const x = "<div>Hi</div>";
+//   return (
+//     <>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/" element={<BfHome />} />
+//         <Route path="/home" element={<Home />} />
+//         <Route path="/builder" element={<Builder />} />
+//         <Route path="/product">
+//           <Route path="" element={<Allproduct />} />
+//           <Route path="cpu" element={<Cpu />} />
+//           <Route path="cpu-cooler" element={<CpuCooler />} />
+//           <Route path="motherboard" element={<Motherboard />} />
+//           <Route path="memory" element={<Memory />} />
+//           <Route path="internal-drive" element={<InternalDrive />} />
+//           <Route path="video-card" element={<VideoCard />} />
+//           <Route path="case" element={<Case />} />
+//           <Route path="power-supply" element={<PowerSupply />} />
+//           <Route path=":id" element={<Product />} />
+//         </Route>
+//         <Route path="/login" element={<LoginForm />} />
+//         <Route path="/register" element={<RegisterForm />} />
+//         <Route path="/user">
+//           <Route path=":id" element={<UserPage />} />
+//           <Route path="yourcart" element={<YourCart />} />
+//         </Route>
+//         <Route path="/adminhome">
+//           <Route path="" element={<AdminFirstPage/>} />
+//           <Route path="addproduct">
+//             <Route path="" element={<AllAdd />} />
+//             <Route path="cpu" element={<AddCpu />} />
+//             <Route path="cpu-cooler" element={<AddCpuCooler />} />
+//             <Route path="motherboard" element={<AddMotherboard />} />
+//             <Route path="memory" element={<AddMemory />} />
+//             <Route path="internal-drive" element={<AddInternalDrive />} />
+//             <Route path="video-card" element={<AddVideoCard />} />
+//             <Route path="case" element={<AddCase />} />
+//             <Route path="power-supply" element={<AddPowerSupply />} />
+//           </Route>
+//           <Route path="order" element={<AdminOrder />} />
+//         </Route>
+
+//         <Route path="*" element={<Navigate to="/" />} />
+//       </Routes>
+//       <Footer />
+//     </>
+//   );
+// }
+
+function WrappedRoutes() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<BfHome />} />
         <Route path="/home" element={<Home />} />
         <Route path="/builder" element={<Builder />} />
         <Route path="/product">
@@ -51,14 +99,16 @@ function Router() {
           <Route path="power-supply" element={<PowerSupply />} />
           <Route path=":id" element={<Product />} />
         </Route>
+
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/user">
           <Route path=":id" element={<UserPage />} />
           <Route path="yourcart" element={<YourCart />} />
         </Route>
+
         <Route path="/adminhome">
-          <Route path="" element={<AdminFirstPage/>} />
+          <Route path="" element={<AdminFirstPage />} />
           <Route path="addproduct">
             <Route path="" element={<AllAdd />} />
             <Route path="cpu" element={<AddCpu />} />
@@ -72,7 +122,6 @@ function Router() {
           </Route>
           <Route path="order" element={<AdminOrder />} />
         </Route>
-
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
@@ -80,4 +129,12 @@ function Router() {
   );
 }
 
+function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<BfHome />} />
+      <Route path="*" element={<WrappedRoutes />} />
+    </Routes>
+  );
+}
 export default Router;

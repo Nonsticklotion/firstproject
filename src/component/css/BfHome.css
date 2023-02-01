@@ -1,0 +1,22 @@
+.bigbox {
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+}
+.box {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.bfhomepic{
+    width: 70rem;
+    height: 35rem;
+    margin: 10px;
+}
+.enterwebsitebutt{
+    margin: 5px 0;
+    font-size: x-large;
+}

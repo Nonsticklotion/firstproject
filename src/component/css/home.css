@@ -1,0 +1,34 @@
+.bigbox1 {
+  margin: 20px auto;
+  width: 96%;
+  height: 500px;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.h1product {
+  margin: auto;
+  font-size: 80px;
+}
+.whatsnew {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
+  width: 30%;
+  background-color: rgba(237, 25, 25, 0.419);
+}
+.showproduct {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-items: center;
+  width: 70%;
+  background-color: rgba(32, 66, 217, 0.436);
+}
+.card {
+  width: 17rem;
+  margin: auto 10px auto 30px;
+}
